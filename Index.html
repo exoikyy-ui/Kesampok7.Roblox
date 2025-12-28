@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kesampok 7 | Cute Roblox</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Poppins, Arial, sans-serif;
+  background:linear-gradient(180deg,#1b1b2f,#0f0f13);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* FLOATING EMOJI */
+.float{
+  position:fixed;
+  font-size:22px;
+  animation: float 8s linear infinite;
+  opacity:.45;
+}
+@keyframes float{
+  from{transform:translateY(110vh) rotate(0deg);}
+  to{transform:translateY(-10vh) rotate(360deg);}
+}
+
+/* MARQUEE */
+.marquee{
+  background:#ff8fcf;
+  color:#000;
+  padding:8px;
+  font-size:13px;
+  font-weight:700;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.marquee span{
+  display:inline-block;
+  padding-left:100%;
+  animation: jalan 13s linear infinite;
+}
+@keyframes jalan{
+  to{transform:translateX(-100%);}
+}
+
+/* CONTAINER */
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:22px;
+}
+
+/* PROFILE */
+.profile{
+  text-align:center;
+  margin-bottom:26px;
+}
+.profile img{
+  width:145px;
+  height:145px;
+  border-radius:50%;
+  border:5px solid #ff8fcf;
+  box-shadow:0 10px 0 #000;
+  background:#fff;
+  animation:bounce 2.4s infinite;
+}
+@keyframes bounce{
+  0%,100%{transform:translateY(0) rotate(0deg);}
+  50%{transform:translateY(-10px) rotate(-2deg);}
+}
+.profile h1{
+  font-size:30px;
+  margin:14px 0 6px;
+}
+.badge{
+  display:inline-block;
+  background:#7cf5ff;
+  color:#000;
+  font-size:12px;
+  padding:6px 18px;
+  border-radius:30px;
+  margin-bottom:10px;
+  font-weight:700;
+}
+.profile p{
+  font-size:14px;
+  color:#eee;
+  line-height:1.6;
+}
+
+/* BUTTON */
+.link{
+  background:#1f1f2e;
+  border:2px solid #ff8fcf;
+  padding:18px;
+  border-radius:26px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-weight:800;
+  color:#fff;
+  box-shadow:0 8px 0 #000;
+  transition:.18s;
+}
+.link:hover{
+  transform:scale(1.06) rotate(-1.5deg);
+}
+.link:active{
+  transform:translateY(4px);
+  box-shadow:0 3px 0 #000;
+}
+.link img{
+  width:30px;
+}
+
+/* CLICK EFFECT */
+.pop{
+  position:fixed;
+  font-size:20px;
+  animation: pop .9s ease-out forwards;
+}
+@keyframes pop{
+  to{transform:translateY(-60px) scale(1.8);opacity:0;}
+}
+
+/* DECOR */
+.decor{
+  text-align:center;
+  font-size:24px;
+  letter-spacing:8px;
+  margin:26px 0;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#aaa;
+  margin-top:24px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING ICON -->
+<div class="float" style="left:6%">🐣</div>
+<div class="float" style="left:22%;animation-delay:1s;">💕</div>
+<div class="float" style="left:42%;animation-delay:3s;">🎮</div>
+<div class="float" style="left:62%;animation-delay:2s;">✨</div>
+<div class="float" style="left:82%;animation-delay:4s;">🌸</div>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <span>🐣 KESAMPOK 7 • ROBLOX CUTE COMMUNITY • MABAR • FRIEND • FUN • JOIN DISCORD 💕</span>
+</div>
+
+<div class="container">
+
+<!-- PROFILE -->
+<div class="profile">
+  <!-- PP ROBLOX LUCU (PASTI MUNCUL) -->
+  <img src="https://cdn-icons-png.flaticon.com/512/924/924915.png">
+  <h1>kesampok 7</h1>
+  <div class="badge">🐣 Cute Roblox Squad</div>
+  <p>
+    🎮 Mau mabar Roblox? Join Discord<br>
+    💕 Cari temen / pacar Roblox? Chat WA 😆
+  </p>
+</div>
+
+<!-- DISCORD -->
+<a href="https://discord.gg/Fq6P3qnE5" class="link">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
+  JOIN DISCORD ROBLOX
+</a>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/6282174919495" class="link">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+  CHAT WHATSAPP
+</a>
+
+<div class="decor">
+  🐣 💕 🎮 🌸 ✨
+</div>
+
+<div class="footer">
+© 2025 kesampok 7 • Cute Roblox Community
+</div>
+
+</div>
+
+<!-- SOUND ROBLOX OOF -->
+<audio id="oof" src="https://cdn.pixabay.com/audio/2022/03/15/audio_2d14f0e6d8.mp3"></audio>
+
+<script>
+document.querySelectorAll('.link').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const s=document.getElementById('oof');
+    s.currentTime=0;
+    s.play();
+  });
+});
+
+document.addEventListener('click',e=>{
+  const p=document.createElement('div');
+  p.className='pop';
+  p.innerText=Math.random()>0.5?'💖':'✨';
+  p.style.left=e.clientX+'px';
+  p.style.top=e.clientY+'px';
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(),900);
+});
+</script>
+
+</body>
+</html>
